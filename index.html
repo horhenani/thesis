@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/white.css" />
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+</head>
+<style type="text/css">
+  .tricykol-title {
+    font-size: 3em;
+    font-weight: bold;
+    transition: margin-top .5s ease;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+    transition: opacity .5s ease, display .5s step-end;
+  }
+
+  .reveal .slides section {
+    transition-duration: .5s;
+  }
+
+
+  .reveal>.slides>section>h2 {
+    text-align: left;
+  }
+
+  .reveal>.slides>section>.container {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "col1 col2 col3";
+
+  }
+
+
+  .reveal>.slides>section>.container>.col1 {
+    grid-area: col1;
+  }
+
+  .reveal>.slides>section>.container>.col2 {
+    grid-area: col2;
+  }
+
+  .reveal>.slides>section>.container>.col3 {
+    grid-area: col3;
+  }
+
+  .reveal>.slides>section>.container>.cols>.obj>p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-wrap: wrap;
+  }
+
+  .reveal>.slides>section>.container>.col1>.obj>p {
+    text-align: right;
+  }
+
+  .reveal>.slides>section>.container>.col3>.obj>p {
+    text-align: left;
+  }
+
+
+  .reveal>.slides>section>.container>.col1 {
+    padding-left: 50px;
+  }
+
+  .reveal>.slides>section>.container>.col2>.line {
+    height: 600px;
+    width: 3px;
+    background-color: #4a4a4a;
+    margin: 0;
+  }
+
+  .reveal>.slides>section>.container>.col2>.bullet {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #4a4a4a;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+  }
+
+  .reveal>.slides>section>.container>.col2>.b1 {
+    top: 128px;
+    left: 447px;
+  }
+
+  .reveal>.slides>section>.container>.col2>.b2 {
+    top: 213px;
+    left: 447px;
+  }
+
+  .reveal>.slides>section>.container>.col2>.b3 {
+    top: 310px;
+    left: 447px;
+  }
+
+  .reveal>.slides>section>.container>.col2>.b4 {
+    top: 420px;
+    left: 447px;
+  }
+
+  .reveal>.slides>section>.container>.col2>.b5 {
+    top: 500px;
+    left: 447px;
+  }
+
+  .reveal>.slides>section>.container>.col2>.b6 {
+    top: 590px;
+    left: 447px;
+  }
+
+
+  .reveal>.slides>section>.container>.col1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 40px 1fr 40px 1fr 100px;
+    grid-template-areas:
+      "obj1"
+      "."
+      "obj3"
+      "."
+      "obj5"
+      ".";
+  }
+
+  .reveal>.slides>section>.container>.col1>.obj1 {
+    grid-area: obj1;
+  }
+
+  .reveal>.slides>section>.container>.col1>.obj3 {
+    grid-area: obj3;
+  }
+
+  .reveal>.slides>section>.container>.col1>.obj5 {
+    grid-area: obj5;
+  }
+
+
+
+  .reveal>.slides>section>.container>.col3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr 50px 1fr 30px 1fr;
+    grid-template-areas:
+      "."
+      "obj2"
+      "."
+      "obj4"
+      "."
+      "obj6";
+  }
+
+
+
+
+  .reveal>.slides>section>.container>.col3>.obj2 {
+    grid-area: obj2;
+  }
+
+  .reveal>.slides>section>.container>.col3>.obj4 {
+    grid-area: obj4;
+  }
+
+  .reveal>.slides>section>.container>.col3>.obj6 {
+    grid-area: obj6;
+  }
+
+
+
+  .reveal>.slides>section>.container>.cols>.obj {
+    padding: 20px;
+    text-wrap: pretty;
+    width: 300px;
+
+  }
+</style>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Hello World!</h1>
+      </section>
+      <section data-auto-animate data-auto-animate-duration=".5">
+        <h1 class="tricykol-title" data-id="tricykol">Tricykol</h1>
+        <p class="subtitle" data-id="subtitle">
+          Your Smart Online Transportation Solution
+        </p>
+      </section>
+      <section data-auto-animate data-auto-animate-duration=".5">
+        <h1 class="tricykol-title" data-id="tricykol" style="margin-top: -150px ">
+          Tricykol
+        </h1>
+        <p class="subtitle" data-id="subtitle" style="margin: 0; padding: 0; height: 0; overflow: hidden; opacity: 0;">
+          Your Smart Online Transportation Solution
+        </p>
+        <ul class="porman" style="list-style: none; padding-right: 18rem; line-height: 5rem;">
+          <li>"Tricycle"</li>
+          <li class="fragment fade-up">"Tricycle ni Angkol"</li>
+          <li class="fragment fade-up">"Traysikol" - cebuano</li>
+        </ul>
+      </section>
+      <section>
+        <ul style="list-style: none;">
+          <li><span style="color: red;">Tricy</span>cle + Traysi<span style="color: red;">kol</span></li>
+          <center class="fragment fade-up">
+            <li> = &nbsp; <h2>Tricykol</h2>
+            </li>
+          </center>
+        </ul>
+      </section>
+
+      <section>
+        <ul style="padding: 60px;">
+          <li>
+            <p><b>Tricykol</b>- Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, voluptate?</p>
+          </li>
+          <li class="fragment fade-up">tricyle in paniqui</li>
+          <li class="fragment fade-up">group of people - teens, students, women, seniors</li>
+        </ul>
+      </section>
+
+      <section class="problem">
+        <h2>Challenges in Mobility</h2>
+        <ol style="font-size: 2rem; line-height: 3.5rem; padding: 0 20px;">
+          <li>Inefficient dispatching leading to uneven tricycle distribution</li>
+          <li>Inconsistent and sometimes unfair fare calculation</li>
+          <li>Difficulties in booking tricycles, especially during peak hours</li>
+          <li>Safety concerns, particularly for vulnerable groups</li>
+          <li>Lack of real-time tracking for emergency response and performance monitoring</li>
+          <li>Absence of a centralized system for managing tricycle operations</li>
+        </ol>
+      </section>
+      <section data-auto-animate data-auto-animate-duration=".5">
+        <h2>Tricykol's Roadmap to Success</h2>
+      </section>
+
+      <section data-auto-animate data-auto-animate-duration=".5" style="margin-top: -10px; font-size: 1.5rem;">
+        <h2>Tricykol's Roadmap to Success</h2>
+
+        <div class="container">
+          <div class="col1 cols">
+            <div class="obj1 obj">
+              <p>Design and implement a user-friendly mobile application for efficient tricycle booking and dispatch</p>
+            </div>
+            <div class="obj3 obj">
+              <p>Integrate real-time tracking and route optimization features</p>
+            </div>
+            <div class="obj5 obj">
+              <p>Measure the app's effectiveness in promoting digital literacy and inclusion</p>
+            </div>
+          </div>
+
+          <div class="col2">
+            <div class="bullet b1"></div>
+            <div class="bullet b2"></div>
+            <div class="bullet b3"></div>
+            <div class="bullet b4"></div>
+            <div class="bullet b5"></div>
+            <div class="bullet b6"></div>
+            <div class="line">
+            </div>
+
+          </div>
+
+          <div class="col3 cols">
+
+            <div class="obj2 obj">
+              <p>Develop a standardized fare calculation system ensuring transparency and fairness</p>
+            </div>
+
+            <div class="obj4 obj">
+              <p>Implement safety measures including driver verification and emergency alerts</p>
+            </div>
+
+            <div class="obj6 obj">
+              <p>Develop a scalable model adaptable to other municipalities</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section data-auto-animate data-auto-animate-duration=".5" data-transition="slide" data-auto-animate-restart>
+        <h2>Expected Outcomes</h2>
+      </section>
+
+      <section data-auto-animate data-auto-animate-duration=".5">
+        <h2 style="margin-top: -20px; font-size: 2.5rem;">Expected Outcomes</h2>
+        <ul style="font-size: 1.7rem; line-height: 3rem; padding: 0px 30px;">
+          <li>Improved urban mobility with reduced wait times and optimized routes</li>
+          <li class="fragment fade-up">Increased earnings for tricycle drivers through efficient operations</li>
+          <li class="fragment fade-up">Enhanced passenger safety, particularly for vulnerable groups</li>
+          <li class="fragment fade-up">Reduced environmental impact through optimized routing and reduced idle time</li>
+          <li class="fragment fade-up">Valuable data insights for urban planners and policymakers</li>
+          <li class="fragment fade-up">Increased digital literacy and inclusion in the community</li>
+          <li class="fragment fade-up">Standardized, transparent fare system building trust between drivers and
+            passengers</li>
+        </ul>
+      </section>
+
+      <section data-id="rrl" data-auto-animate data-auto-animate-duration=".5" data-transition="slide"
+        data-auto-animate-restart>
+        <h2 data-id="rrl-title">Insights from Global and Local Research</h2>
+      </section>
+
+      <section data-id="rrl" data-auto-animate data-auto-animate-duration=".5" >
+        <h2 data-id="rrl-title" style="margin-top: -300px; font-size: 2rem;">Insights from Global and Local Research
+        </h2>
+      </section>
+        <section data-auto-animate data-auto-animate-duration=".5" data-auto-animate-restart>
+          <h1 style="text-align: left;">User Interface</h1>
+        </section>
+
+        <section data-auto-animate data-auto-animate-duration=".5">
+        <h1 style="text-align: left; font-size: 1.8rem; margin-top: -10px;">User Interface</h1>
+          <div style=" display: flex; justify-content: space-evenly; ">
+
+          <div style="margin-right: 20px; line-height: 1.5;">
+              <ul style="font-size: 1.8rem;">
+                <li>Homepage</li>
+                <li class="fragment fade-up">Create Passenger Account</li>
+              </ul>
+          </div>
+
+          <div style="margin-top: -30px; margin-right: 70px;">
+            <iframe src="mockups/homepage.html" width="380" height="660"
+              style="border: none;"></iframe>
+          </div>
+          </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+</body>
+
+</html>
