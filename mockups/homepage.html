@@ -71,18 +71,17 @@
         color: #007bff;
         border: 2px solid black;
       }
-      .logo>img {
+      .logo > img {
         width: 120px;
         height: 120px;
         border-radius: 100%;
         border: 5px solid gray;
-
       }
       h1 {
         font-size: 1.5rem;
       }
       p {
-        font-size: .8rem;
+        font-size: 0.8rem;
         text-align: center;
         margin-bottom: 20px;
         color: #666;
@@ -216,16 +215,16 @@
       >
         <div class="header">
           <div class="logo">
-            <img src="logo.png" alt="">
+            <img src="logo.png" alt="" />
           </div>
         </div>
         <div class="content">
-          <h1 style="padding-bottom: 10px; color: #010;">Welcome to Tricykol</h1>
+          <h1 style="padding-bottom: 10px; color: #010">Welcome to Tricykol</h1>
           <p>
             Ang traysikel ni Angkol!
-            <br>
+            <br />
           </p>
-          <p style="font-size: .7rem; margin-bottom: -8px; padding-top: 20px;">
+          <p style="font-size: 0.7rem; margin-bottom: -8px; padding-top: 20px">
             Choose how you want to use our app:
           </p>
           <div class="button-container">
@@ -239,13 +238,16 @@
               class="btn btn-outline"
               @click="currentScreen = 'rider'; direction = 'right'"
             >
-              I'm an Angkol
+              Be an Angkol Rider
             </button>
           </div>
         </div>
-        <div class="footer" style="height: 80px; margin-bottom: -25px;">
-          <p style="font-size: .7rem;">
-            By continuing, you agree to our <a style="color: #4a4a4a;" href="#">Terms of Service and Privacy Policy</a>.
+        <div class="footer" style="height: 80px; margin-bottom: -25px">
+          <p style="font-size: 0.7rem">
+            By continuing, you agree to our
+            <a style="color: #4a4a4a" href="#"
+              >Terms of Service and Privacy Policy</a
+            >.
           </p>
         </div>
       </div>
@@ -268,7 +270,7 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Passenger Account</h1>
+          <h1 style="padding-top: 15px">Passenger Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Username" />
@@ -286,7 +288,9 @@
             >
               Create Account
             </button>
-            <a style="font-size: .7rem; color: gray;" href="#">Forgot Password?</a>
+            <a style="font-size: 0.7rem; color: gray" href="#"
+              >Forgot Password?</a
+            >
           </div>
         </div>
       </div>
@@ -308,7 +312,7 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Angkol Account</h1>
+          <h1 style="padding-top: 15px">Angkol Rider Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Username" />
@@ -326,7 +330,9 @@
             >
               Create Account
             </button>
-            <a style="font-size: .7rem; color: gray;" href="#">Forgot Password?</a>
+            <a style="font-size: 0.7rem; color: gray" href="#"
+              >Forgot Password?</a
+            >
           </div>
         </div>
       </div>
@@ -349,7 +355,7 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Create Passenger Account</h1>
+          <h1 style="padding-top: 15px">Create Passenger Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Full Name" />
@@ -389,7 +395,7 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Create Angkol Account</h1>
+          <h1 style="padding-top: 15px">Create Angkol Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Full Name" />
@@ -434,13 +440,23 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Passenger Dashboard</h1>
+          <h1 style="padding-top: 15px">Passenger Dashboard</h1>
         </div>
         <div class="content">
           <!-- <div id="passengerMap" class="map-container"></div> -->
-          <p style="padding-bottom: 14px; margin-top: -15px; width: 160px;">Welcome to your passenger dashboard!</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.10433085342967!2d120.58144938653116!3d15.662589226276491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396cb23aaa68373%3A0xe6ca7f8412c81379!2sSt.%20Paul%20College%20of%20Technology%20Paniqui!5e0!3m2!1sen!2sus!4v1726909645507!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <div class="button-container" style="margin-top: 7px;">
+          <p style="padding-bottom: 14px; margin-top: -15px; width: 160px">
+            Welcome to your passenger dashboard!
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.10433085342967!2d120.58144938653116!3d15.662589226276491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396cb23aaa68373%3A0xe6ca7f8412c81379!2sSt.%20Paul%20College%20of%20Technology%20Paniqui!5e0!3m2!1sen!2sus!4v1726909645507!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="button-container" style="margin-top: 7px">
             <button
               class="btn"
               @click="currentScreen = 'bookRide'; direction = 'right'"
@@ -481,12 +497,22 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Angkol Dashboard</h1>
+          <h1 style="padding-top: 15px">Angkol Dashboard</h1>
         </div>
         <div class="content">
-          <p style="padding-bottom: 14px; margin-top: -15px;">Welcome to your rider dashboard!</p>
+          <p style="padding-bottom: 14px; margin-top: -15px">
+            Welcome to your rider dashboard!
+          </p>
           <!-- <div id="riderMap" class="map-container"></div> -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.10433085342967!2d120.58144938653116!3d15.662589226276491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396cb23aaa68373%3A0xe6ca7f8412c81379!2sSt.%20Paul%20College%20of%20Technology%20Paniqui!5e0!3m2!1sen!2sus!4v1726909645507!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.10433085342967!2d120.58144938653116!3d15.662589226276491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396cb23aaa68373%3A0xe6ca7f8412c81379!2sSt.%20Paul%20College%20of%20Technology%20Paniqui!5e0!3m2!1sen!2sus!4v1726909645507!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
           <div class="button-container">
             <button
               class="btn"
@@ -528,10 +554,18 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Book a Ride</h1>
+          <h1 style="padding-top: 15px">Book a Ride</h1>
         </div>
         <div class="content">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.10433085342967!2d120.58144938653116!3d15.662589226276491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396cb23aaa68373%3A0xe6ca7f8412c81379!2sSt.%20Paul%20College%20of%20Technology%20Paniqui!5e0!3m2!1sen!2sus!4v1726909645507!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.10433085342967!2d120.58144938653116!3d15.662589226276491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396cb23aaa68373%3A0xe6ca7f8412c81379!2sSt.%20Paul%20College%20of%20Technology%20Paniqui!5e0!3m2!1sen!2sus!4v1726909645507!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
           <!-- <div id="bookRideMap" class="map-container"></div> -->
           <input
             type="text"
@@ -577,7 +611,7 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Confirm Ride</h1>
+          <h1 style="padding-top: 15px">Confirm Ride</h1>
         </div>
         <div class="content">
           <p>Ride Details:</p>
@@ -614,7 +648,7 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <h1 style="padding-top: 15px;">Ride Booked</h1>
+          <h1 style="padding-top: 15px">Ride Booked</h1>
         </div>
         <div class="content">
           <p>Your ride has been successfully booked!</p>
@@ -689,7 +723,7 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Available Rides</h1>
+          <h1 style="padding-top: 15px">Available Rides</h1>
         </div>
         <div class="content">
           <div style="width: 100%; overflow-y: auto">
@@ -738,7 +772,7 @@
           >
             &larr;
           </button>
-          <h1 style="padding-top: 15px;">Earnings</h1>
+          <h1 style="padding-top: 15px">Earnings</h1>
         </div>
         <div class="content">
           <h2>Total Earnings: ₱1,250</h2>
