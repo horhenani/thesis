@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tricykol - Interactive Mockup</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <script
       src="https://unpkg.com/alpinejs@3.13.1/dist/cdn.min.js"
@@ -44,8 +49,9 @@
       .header {
         background-color: #4a4a4a;
         color: white;
-        padding: 40px 20px;
+        padding: 30px 20px;
         text-align: center;
+        height: auto;
       }
       .content {
         background-color: #f0f0f0;
@@ -62,14 +68,15 @@
         height: 120px;
         background-color: white;
         border-radius: 100%;
-        margin: 0 auto 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 28px;
         font-weight: bold;
         color: #007bff;
-        border: 2px solid black;
+        position: absolute;
+        top: 15%;
+        right: 32%;
       }
       .logo > img {
         width: 120px;
@@ -79,6 +86,7 @@
       }
       h1 {
         font-size: 1.5rem;
+        padding-bottom: 40px ;
       }
       p {
         font-size: 0.8rem;
@@ -86,6 +94,7 @@
         margin-bottom: 20px;
         color: #666;
       }
+
       .btn {
         display: block;
         width: 60%;
@@ -137,16 +146,33 @@
         border-radius: 5px;
         font-size: 16px;
       }
-      .back-btn {
+      select {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      select > option {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        bottom: -300px;
+        left: 100;
+      }
+
+      .back-btn{
+        /* position: absolute; */
+        /* top: 20px; */
+        /* left: 20px; */
         background: none;
         border: none;
         color: white;
         font-size: 18px;
         cursor: pointer;
       }
+
+
       .button-container {
         width: 100%;
         display: flex;
@@ -213,13 +239,13 @@
         x-transition:leave-start="slide-leave-right"
         x-transition:leave-end="slide-leave-right-active"
       >
-        <div class="header">
+        <div class="header" style="height: 28%;">
           <div class="logo">
             <img src="logo.png" alt="" />
           </div>
         </div>
         <div class="content">
-          <h1 style="padding-bottom: 10px; color: #010">Welcome to Tricykol</h1>
+          <h1 style="padding: 40px 0 10px 0; color: #010">Welcome to Tricykol</h1>
           <p>
             Ang traysikel ni Angkol!
             <br />
@@ -264,13 +290,26 @@
         x-transition:leave-end="slide-leave-right-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'welcome'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Passenger Account</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Passenger Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Username" />
@@ -306,13 +345,24 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'welcome'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Angkol Rider Account</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+          </div>
+
+          <h1 style="padding: 15px 0;">Angkol Rider Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Username" />
@@ -349,18 +399,31 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'passenger'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Create Passenger Account</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding-bottom: 15px">Create Passenger Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Full Name" />
           <input type="email" class="input-field" placeholder="Email" />
           <input type="password" class="input-field" placeholder="Password" />
+          <input type="number" class="input-field" placeholder="Age" />
           <input
             type="password"
             class="input-field"
@@ -389,28 +452,46 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'rider'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Create Angkol Account</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Create Angkol Account</h1>
         </div>
         <div class="content">
           <input type="text" class="input-field" placeholder="Full Name" />
-          <input type="email" class="input-field" placeholder="Email" />
+          <input type="text" class="input-field" placeholder="Phone Number" />
           <input type="password" class="input-field" placeholder="Password" />
           <input
             type="password"
             class="input-field"
             placeholder="Confirm Password"
           />
-          <input
-            type="text"
-            class="input-field"
-            placeholder="Tricycle License Number"
-          />
+          <!-- <select -->
+          <!--   id="license" -->
+          <!--   class="bg-white border border-gray-300 text-gray-400 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block p-4 " -->
+          <!-- > -->
+          <select name="" id="" style="background: white; color: gray;">
+
+            <option selected >Driver's License</option>
+            <option value="professional">Professional</option>
+            <option value="non-professional">Non-Professional</option>
+            <option value="none">None</option>
+          </select>
           <div class="button-container">
             <button
               class="btn"
@@ -434,13 +515,25 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'welcome'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Passenger Dashboard</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Passenger Dashboard</h1>
         </div>
         <div class="content">
           <!-- <div id="passengerMap" class="map-container"></div> -->
@@ -469,9 +562,11 @@
             >
               View Ride History
             </button>
+
             <button
-              class="btn"
+              class="btn logout"
               @click="currentScreen = 'welcome'; direction = 'left'"
+              style="background-color: #fc766d;"
             >
               Logout
             </button>
@@ -491,13 +586,25 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'welcome'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Angkol Dashboard</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Angkol Dashboard</h1>
         </div>
         <div class="content">
           <p style="padding-bottom: 14px; margin-top: -15px">
@@ -527,8 +634,10 @@
               View Earnings
             </button>
             <button
-              class="btn"
+              class="btn logout"
               @click="currentScreen = 'welcome'; direction = 'left'"
+              style="background-color: #fc766d;"
+
             >
               Logout
             </button>
@@ -548,13 +657,25 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'passengerDashboard'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Book a Ride</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Book a Ride</h1>
         </div>
         <div class="content">
           <iframe
@@ -605,13 +726,25 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'bookRide'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Confirm Ride</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Confirm Ride</h1>
         </div>
         <div class="content">
           <p>Ride Details:</p>
@@ -648,7 +781,7 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <h1 style="padding-top: 15px">Ride Booked</h1>
+          <h1 style="padding: 15px 0;">Ride Booked</h1>
         </div>
         <div class="content">
           <p>Your ride has been successfully booked!</p>
@@ -678,13 +811,25 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'passengerDashboard'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1>Ride History</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Ride History</h1>
         </div>
         <div class="content">
           <div style="width: 100%; overflow-y: auto">
@@ -717,13 +862,24 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'riderDashboard'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Available Rides</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+          <h1 style="padding: 15px 0">Available Rides</h1>
         </div>
         <div class="content">
           <div style="width: 100%; overflow-y: auto">
@@ -766,13 +922,25 @@
         x-transition:leave-end="slide-leave-left-active"
       >
         <div class="header">
-          <button
-            class="back-btn"
-            @click="currentScreen = 'riderDashboard'; direction = 'left'"
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: -17px;
+              padding-bottom: 20px;
+              width: 100%;
+            "
           >
-            &larr;
-          </button>
-          <h1 style="padding-top: 15px">Earnings</h1>
+            <button
+              class="back-btn"
+              @click="currentScreen = 'welcome'; direction = 'left'"
+            >
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+
+          <h1 style="padding: 15px 0;">Earnings</h1>
         </div>
         <div class="content">
           <h2>Total Earnings: ₱1,250</h2>
